@@ -27,12 +27,21 @@ int main()
         cin >> numberOfLbs[index];
     }
 
+    cout << "Here is the price per pound for each plastic: ";
+    for (int index = 0; index < NUM_PLASTICS; index++)
+    {
+        totalCost[index] = numberOfLbs[index] * plasticPerLb[index];
+        cout << "Cost per pound for : " << plastics[index];
+        cout << ": $" << totalCost[index] << endl;
+    }
+
     //displayPlastics(plastics, NUM_PLASTICS); //to show plastics
     //readNumLbs(numberOfLbs, NUM_PLASTICS);
 
 
     return 0;
 }
+
 
 /*
 void displayPlastics(string plast[], int size)
