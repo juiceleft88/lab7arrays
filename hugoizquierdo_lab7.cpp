@@ -21,6 +21,12 @@ int main()
 
     cout << "Enter the weight for each item to create a purchase order." << endl;
 
+    for (int index = 0; index < NUM_PLASTICS; index++)
+    {
+        cout << "How many pounds of " << plastics[index] << "?" << endl;
+        cin >> numberOfLbs[index];
+    }
+
     //displayPlastics(plastics, NUM_PLASTICS); //to show plastics
     //readNumLbs(numberOfLbs, NUM_PLASTICS);
 
@@ -42,5 +48,5 @@ void readNumLbs (double poundNum[], int size2)
     cout << "Please enter the amount of pounds for each plastic" << endl;
     for (int k = 0; k < size2; k++)
     cin >> poundNum[k];
-    */
 }
+*/
