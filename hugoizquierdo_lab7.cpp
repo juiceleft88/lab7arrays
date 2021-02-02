@@ -20,19 +20,25 @@ int main()
     double totalCost[NUM_PLASTICS];
 
     cout << "Enter the weight for each item to create a purchase order." << endl;
+    cout << setprecision(2) << fixed << endl;
 
     for (int index = 0; index < NUM_PLASTICS; index++)
     {
-        cout << "How many pounds of " << plastics[index] << "?" << endl;
+        cout << "How many pounds of " << plastics[index] << "? ";
         cin >> numberOfLbs[index];
+        while (numberOfLbs[index] < 0)
+        {
+            cout << "No negative values, please enter the weight again: ";
+            cin >> numberOfLbs[index];
+        }
     }
 
-    cout << "Here is the price per pound for each plastic: ";
+    cout << "Here is the price per pound for each plastic: " << endl;
     for (int index = 0; index < NUM_PLASTICS; index++)
     {
         totalCost[index] = numberOfLbs[index] * plasticPerLb[index];
-        cout << "Cost per pound for : " << plastics[index];
-        cout << ": $" << totalCost[index] << endl;
+        cout << "Cost per pound for " << plastics[index];
+        cout << " is : $" << totalCost[index] << endl;
     }
 
     //displayPlastics(plastics, NUM_PLASTICS); //to show plastics
