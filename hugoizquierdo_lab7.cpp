@@ -8,10 +8,8 @@
 
 using namespace std;
 
-//void displayPlastics(string [], int);
-//void readNumLbs(double [], int);
+void total(double[], double[]);
 void displayResults(string[], double[], double[], double[], int);
-
 
 int main()
 {
@@ -21,6 +19,7 @@ int main()
     double numberOfLbs[NUM_PLASTICS];
     double totalCost[NUM_PLASTICS];
 
+    cout << "This program creates a purchase order for Plastic Products Inc." << endl;
     cout << "Enter the weight for each item to create a purchase order." << endl;
     cout << setprecision(2) << fixed << endl;
 
@@ -39,11 +38,6 @@ int main()
     
 
     displayResults(plastics, numberOfLbs, plasticPerLb, totalCost, NUM_PLASTICS);
-
-    //displayPlastics(plastics, NUM_PLASTICS); //to show plastics
-    //readNumLbs(numberOfLbs, NUM_PLASTICS);
-
-
     return 0;
 }
 
@@ -54,25 +48,10 @@ void displayResults(string plastics[], double numberOfLbs[], double plasticPerLb
     cout << "-------------------------------------------------------------------------------------\n";
     for (int index = 0; index < count; index++)
     {
+        totalCost[index] = numberOfLbs[index] * plasticPerLb[index];
         cout << left <<setw(40) << plastics[index] << left << setw(20) << numberOfLbs[index] << left << setw(20) << plasticPerLb[index] << left << totalCost[index];
         cout << endl;
     }
    
 }
 
-/*
-void displayPlastics(string plast[], int size)
-{   
-    for (int i=0; i < size; i++)
-    {
-    cout << plast[i] << endl;
-    }
-}
-
-void readNumLbs (double poundNum[], int size2)
-{
-    cout << "Please enter the amount of pounds for each plastic" << endl;
-    for (int k = 0; k < size2; k++)
-    cin >> poundNum[k];
-}
-*/
