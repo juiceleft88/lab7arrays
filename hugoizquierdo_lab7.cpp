@@ -8,8 +8,8 @@
 
 using namespace std;
 
-void total(double[], double[]);
 void displayResults(string[], double[], double[], double[], int);
+void displayTotal(double, int);
 
 int main()
 {
@@ -38,7 +38,9 @@ int main()
     
 
     displayResults(plastics, numberOfLbs, plasticPerLb, totalCost, NUM_PLASTICS);
+    void displayTotal(numberOfLbs, NUM_PLASTICS);
     return 0;
+
 }
 
 //function to display
@@ -53,5 +55,15 @@ void displayResults(string plastics[], double numberOfLbs[], double plasticPerLb
         cout << endl;
     }
    
+}
+
+void displayTotal(double weightTotal[], int size)
+{
+    int total = 0;
+    for (int count = 0; count < size; count++)
+        {
+        total += weightTotal[count];
+        cout << total << endl;
+        }
 }
 
