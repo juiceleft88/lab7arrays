@@ -35,7 +35,7 @@ int main()
         }
     }
 
-    cout << "Here is the price per pound for each plastic: " << endl;
+    cout << "--------------------------------Purchase Order--------------------------------------" << endl;
     
 
     displayResults(plastics, numberOfLbs, plasticPerLb, totalCost, NUM_PLASTICS);
@@ -50,16 +50,14 @@ int main()
 //function to display
 void displayResults(string plastics[], double numberOfLbs[], double plasticPerLb[], double totalCost[], int count)
 {
-    cout << "Material\tWeight(Pounds)\tCost/Pound\tCost\n";
-    cout << "-------------------------------------------------------------\n";
+    cout << left << setw(40) << "Material" << left << setw(20) << "Weight(Pounds)" << left << setw(20) << "Cost/Pound" << left << "Cost\n";
+    cout << "-------------------------------------------------------------------------------------\n";
     for (int index = 0; index < count; index++)
     {
-        cout << plastics[index];
-        cout << setw(4) << numberOfLbs[index] << endl;
-        cout << setw(4) << plasticPerLb[index] << endl;
-        cout << setw(4) << totalCost[index] << endl;
+        cout << left <<setw(40) << plastics[index] << left << setw(20) << numberOfLbs[index] << left << setw(20) << plasticPerLb[index] << left << totalCost[index];
+        cout << endl;
     }
-    cout << endl;
+   
 }
 
 /*
