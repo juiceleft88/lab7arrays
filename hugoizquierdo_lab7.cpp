@@ -8,8 +8,10 @@
 
 using namespace std;
 
-void displayPlastics(string [], int);
-void readNumLbs(double [], int);
+//void displayPlastics(string [], int);
+//void readNumLbs(double [], int);
+void displayResults(string[], double[], double[], double[], int);
+
 
 int main()
 {
@@ -41,6 +43,8 @@ int main()
         cout << " is : $" << totalCost[index] << endl;
     }
 
+    displayResults(plastics, numberOfLbs, plasticPerLb, totalCost, NUM_PLASTICS);
+
     //displayPlastics(plastics, NUM_PLASTICS); //to show plastics
     //readNumLbs(numberOfLbs, NUM_PLASTICS);
 
@@ -48,6 +52,19 @@ int main()
     return 0;
 }
 
+//function to display
+void displayResults(string plastics[], double numberOfLbs[], double plasticPerLb[], double totalCost[], int count)
+{
+    cout << "Material\tWeight(Pounds)\tCost/Pound\tCost\n";
+    cout << "-------------------------------------------------------------\n";
+    for (int index = 0; index < count; index++)
+    {
+        cout << plastics[index] << "\t\t$" << setw(8) << numberOfLbs[index];
+        cout << "\t\t$" << setw(8) << plasticPerLb[index];
+        cout << "\t\t$" << setw(8) << totalCost[index];
+    }
+    cout << endl;
+}
 
 /*
 void displayPlastics(string plast[], int size)
