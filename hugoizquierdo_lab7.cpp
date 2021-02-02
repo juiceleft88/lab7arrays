@@ -41,5 +41,5 @@ void readNumLbs (double poundNum[], int size2)
 
 double totalFunction (double);
 {
-    return total num2 again
+    return total num2 again please
 }
